@@ -1,0 +1,380 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1px;
+}
+.container {
+  width: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.font-weight {
+  font-weight: 600;
+}
+
+.align-item {
+  align-items: center;
+}
+
+.justify-content {
+  justify-content: space-between;
+}
+
+ul {
+  list-style: none;
+}
+span {
+  display: block;
+}
+.text-align {
+  text-align: center;
+}
+
+/* navbar-content */
+
+.navbar {
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: white;
+}
+
+.navbar .logo {
+  width: 15rem;
+}
+
+.navbar li {
+  margin-right: 0.5rem;
+}
+img:hover {
+  cursor: pointer;
+}
+.navbar li:hover {
+  color: rgba(61, 43, 226, 0.829);
+  cursor: pointer;
+}
+
+.navbar i {
+  margin-right: 3rem;
+}
+
+.btn {
+  border: 0;
+  padding: 0.5rem 2rem;
+  border-radius: 8px;
+}
+
+.btn-teacher {
+  background-color: rgba(255, 208, 0, 0.932);
+  padding: 1.1rem;
+}
+.btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  color: darkslategrey;
+}
+
+/* content-live-1 */
+
+.content-live-1 img {
+  width: 60%;
+}
+.content-live-1-right {
+  width: 45%;
+}
+
+.content-live-1-left {
+  width: 30%;
+  font-size: 3.3rem;
+  margin: 2rem auto;
+}
+
+.content-live-1::after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  width: 110%;
+  height: 85vh;
+  top: -8vw;
+  left: -5rem;
+  background-color: rgba(255, 187, 0, 0.89);
+  border-radius: 45%;
+}
+
+.booking-btn {
+  width: 70%;
+  display: block;
+  margin-top: -2rem;
+}
+
+/* subjects info content */
+
+.subjects-info {
+  width: 100%;
+}
+.subjects-info ul {
+  padding: 6rem 12rem;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.973);
+}
+
+.subjects-info i {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* more subject btn */
+
+.btn-more-subject {
+  margin: 0 auto;
+  position: relative;
+  bottom: 1rem;
+  align-items: center;
+  display: block;
+}
+
+.btn-more-subject i {
+  margin-left: 0.5rem;
+}
+
+/* content-why-choose-homeguruji */
+
+.content-why-choose-homeguruji h2 {
+  text-align: center;
+  margin: 3rem;
+  font-size: 2.5rem;
+}
+.content-why-choose-homeguruji ul {
+  margin: 3rem;
+}
+
+.content-why-choose-homeguruji i {
+  font-size: 2rem;
+  margin: 3rem 0 2rem 0;
+  color: rgba(0, 128, 6, 0.822);
+}
+
+.content-why-choose-homeguruji span {
+  margin-bottom: 0.5rem;
+}
+
+/* view-feature-content */
+
+.content-view-feature {
+  background-color: rgb(0, 162, 255);
+  padding: 3rem 5rem 0 5rem;
+  text-align: center;
+  margin: 3rem 0;
+}
+.feature-content-right h3 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+.benefit img {
+  width: 2.8rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  background-color: rgb(255, 228, 196);
+}
+.benefit span {
+  margin: 1rem 0 0.1rem 0;
+}
+.benefit ul {
+  padding: 5rem 2.5rem 3rem 2.5rem;
+  font-size: 1.2rem;
+}
+.download-option img {
+  margin: 3rem 0.5rem;
+}
+.app-store {
+  border: solid rgba(255, 255, 255, 0.445) 2px;
+  width: 12rem;
+  border-radius: 8px;
+  padding: -0.5rem;
+}
+/* more-about-homeguruji-CONTENT */
+
+.more-about-homeguruji {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  line-height: 4rem;
+  margin: 5rem 0 2rem 0;
+  font-size: 0.8rem;
+}
+.more-about-homeguruji img {
+  width: 15rem;
+}
+.others i {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.others {
+  padding-bottom: 3rem;
+}
+p {
+  font-size: 0.6rem;
+}
+
+/* media quary */
+
+@media only screen and (max-width: 1100px) {
+  .navbar-right,
+  .btn {
+    font-size: 0.6rem;
+  }
+  .content-live-1-left {
+    font-size: 2.5rem;
+  }
+  .subjects-info ul {
+    padding: 8rem 2rem;
+  }
+  .feature-content-right h3 {
+    font-size: 1.3rem;
+    line-height: normal;
+  }
+  .content-live-1 img {
+    width: 20rem;
+  }
+  .content-why-choose-homeguruji ul {
+    font-size: 0.8rem;
+  }
+  .content-view-feature ul {
+    font-size: 0.8rem;
+  }
+  .feature-content-left img {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 912px) {
+  .logo {
+    width: 1.5rem;
+  }
+
+  .navbar-right i {
+    margin-right: 0.7rem;
+  }
+
+  .navbar {
+    height: 5rem;
+  }
+
+  .content-live-1::after {
+    height: 65vh;
+    top: -8vw;
+    left: -2rem;
+  }
+  .content-live-1-left {
+    font-size: 1.8rem;
+  }
+  .content-live-1-right img {
+    width: 14rem;
+  }
+  .subjects-info ul {
+    font-size: 0.5rem;
+  }
+  .content-view-feature {
+    flex-direction: column;
+  }
+  .feature-content-left img {
+    width: 13rem;
+    margin-bottom: 2rem;
+  }
+  .more-about-homeguruji img {
+    width: 12rem;
+    padding-right: 1rem;
+  }
+  .content-view-feature {
+    padding: 1.5rem;
+  }
+  .download-option img {
+    width: 7rem;
+  }
+}
+@media only screen and (max-width: 832px) {
+  .navbar-right {
+    flex-direction: column;
+  }
+  .btn-teacher {
+    padding: 0.2rem 0;
+    margin-top: 0.5rem;
+  }
+  .navbar .logo {
+    width: 8rem;
+  }
+  .navbar-right li {
+    font-size: 0.5rem;
+  }
+}
+@media only screen and (max-width: 524px) {
+  .navbar .logo {
+    width: 6rem;
+  }
+  .navbar-right li {
+    font-size: 0.1rem;
+  }
+
+  .content-live-1 img {
+    width: 12rem;
+  }
+  .content-live-1-left {
+    font-size: 1rem;
+  }
+  .booking-btn {
+    font-size: 0.2rem;
+    width: 8rem;
+    padding: 0.5rem;
+    margin-top: 0.1rem;
+  }
+  .content-live-1::after {
+    height: 50vh;
+    top: -8vw;
+    left: -2rem;
+  }
+  .content-view-feature ul {
+    font-size: 0.5rem;
+  }
+
+  .content-why-choose-homeguruji ul {
+    font-size: 0.4rem;
+    margin: 0.2rem 0.2rem 2rem 0.2rem;
+  }
+  .content-why-choose-homeguruji li {
+    margin: 1rem;
+  }
+  .content-why-choose-homeguruji h2 {
+    font-size: 1rem;
+    margin: 2rem 0 -1.5rem 0;
+  }
+  .more-about-homeguruji {
+    font-size: 0.5rem;
+  }
+  .more-about-homeguruji span {
+    display: block;
+  }
+  .more-about-homeguruji {
+    line-height: 2rem;
+  }
+  .subjects-info li {
+    padding: 0.2rem;
+    font-size: 0.1rem;
+  }
+  .subjects-info i {
+    font-size: 0.8rem;
+  }
+  .subjects-info ul {
+    margin: -3rem -1rem;
+  }
+  .feature-content-right h3 {
+    font-size: 1rem;
+    margin-bottom: -2rem;
+  }
+}
