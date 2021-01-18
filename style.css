@@ -15,6 +15,8 @@ html {
   width: 100%;
 }
 
+/* utility classes */
+
 .d-flex {
   display: flex;
 }
@@ -31,14 +33,14 @@ html {
   justify-content: space-between;
 }
 
+.text-align {
+  text-align: center;
+}
 ul {
   list-style: none;
 }
 span {
   display: block;
-}
-.text-align {
-  text-align: center;
 }
 
 /* navbar-content */
@@ -83,7 +85,7 @@ img:hover {
 }
 
 .btn-teacher {
-  background-color: rgba(255, 208, 0, 0.932);
+  background-color: rgba(255, 166, 0, 0.89);
   padding: 1.1rem;
 }
 .btn:hover {
@@ -106,16 +108,19 @@ img:hover {
   font-size: 3.3rem;
   margin: 2rem auto;
 }
+.content-live-1-left p {
+  font-size: 2.5rem;
+}
 
 .content-live-1::after {
   z-index: -1;
   position: absolute;
   content: "";
-  width: 110%;
-  height: 90vh;
-  top: -8vw;
-  left: -5rem;
-  background-color: rgba(255, 187, 0, 0.89);
+  width: 100%;
+  height: 96vh;
+  top: -13vw;
+  /* left: -5rem; */
+  background-color: rgba(255, 166, 0, 0.89);
   border-radius: 45%;
 }
 
@@ -124,11 +129,19 @@ img:hover {
   display: block;
   margin-top: -2rem;
 }
+.booking-btn:hover {
+  font-weight: 900;
+  color: black;
+}
 
 /* subjects info content */
 
 .subjects-info {
   width: 100%;
+}
+.subjects-info div {
+  width: 50%;
+  margin-left: 4rem;
 }
 .subjects-info ul {
   padding: 6rem 12rem;
@@ -139,6 +152,12 @@ img:hover {
 .subjects-info i {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+
+.toggle-btn {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
 }
 
 /* more subject btn */
@@ -164,6 +183,10 @@ img:hover {
 }
 .content-why-choose-homeguruji ul {
   margin: 3rem;
+}
+.content-why-choose-homeguruji div {
+  width: 50%;
+  padding: 5%;
 }
 
 .content-why-choose-homeguruji i {
@@ -236,12 +259,12 @@ p {
 
 /* media quary */
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1200px) {
   .navbar-right,
   .btn {
     font-size: 0.6rem;
   }
-  .content-live-1-left {
+  .content-live-1-left p {
     font-size: 2.5rem;
   }
   .subjects-info ul {
@@ -280,24 +303,44 @@ p {
 
   .content-live-1::after {
     height: 65vh;
-    top: -8vw;
-    left: -2rem;
+    top: -12vw;
+    /* left: -2rem; */
   }
-  .content-live-1-left {
+  .content-live-1-left p {
     font-size: 1.8rem;
   }
   .content-live-1-right img {
     width: 14rem;
   }
+  .content-why-choose-homeguruji h2 {
+    font-size: 2rem;
+  }
   .subjects-info ul {
     font-size: 0.5rem;
+    /* padding: 4rem 2rem; */
   }
+  .subjects-info span {
+    font-size: 0.7rem;
+  }
+  /* .content-why-choose-homeguruji div {
+    width: 50%;
+    padding: 20%;
+  } */
+
   .content-view-feature {
     flex-direction: column;
   }
   .feature-content-left img {
     width: 13rem;
     margin-bottom: 2rem;
+  }
+  .content-why-choose-homeguruji div {
+    width: 100%;
+    padding: 0 15%;
+  }
+  .content-why-choose-homeguruji ul {
+    flex-direction: column;
+    justify-content: space-between;
   }
   .more-about-homeguruji img {
     width: 12rem;
@@ -309,32 +352,100 @@ p {
   .download-option img {
     width: 7rem;
   }
+  .booking-btn {
+    width: 90%;
+  }
 }
 @media only screen and (max-width: 832px) {
+  .toggle-btn {
+    display: block;
+  }
+
   .navbar-right {
+    display: none;
+    width: 110%;
+    position: absolute;
+    top: 5rem;
+    left: -1rem;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: black;
+    flex-direction: column;
+    justify-content: end;
+    /* padding-left: 15rem; */
+  }
+  .navbar-right br {
+    display: none;
+  }
+  .navbar-right ul {
     flex-direction: column;
   }
+  .navbar-right li {
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
+    background-color: white;
+    width: 70%;
+    padding: 0.2rem;
+  }
+  .navbar-right i {
+    margin: -0.4rem 0 1rem 0;
+    color: blanchedalmond;
+  }
+
+  .content-live-1-left p {
+    font-size: 1.2rem;
+  }
+  .subjects-info ul {
+    flex-direction: column;
+  }
+  .subjects-info i {
+    font-size: 1.1rem;
+  }
+  .subjects-info div {
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+  .more-about-homeguruji img {
+    display: none;
+  }
+  .more-about-homeguruji {
+    margin-left: 3rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   .btn-teacher {
     padding: 0.2rem 0;
     margin-top: 0.5rem;
+    width: 30%;
+    margin: 0 auto;
   }
   .navbar .logo {
     width: 8rem;
   }
-  .navbar-right li {
+  /* .navbar-right li {
     font-size: 0.5rem;
+  } */
+  .booking-btn {
+    font-size: 0.2rem;
+    width: 9rem;
+    /* padding: 0.5rem; */
+    /* margin-top: 0.1rem; */
   }
 }
 @media only screen and (max-width: 524px) {
   .navbar .logo {
-    width: 6rem;
+    width: 12rem;
+  }
+  .benefit ul {
+    padding: 5rem 0.2rem;
   }
   .navbar-right li {
-    font-size: 0.1rem;
+    font-size: 0.7rem;
   }
 
   .content-live-1 img {
-    width: 12rem;
+    width: 10rem;
   }
   .content-live-1-left {
     font-size: 1rem;
@@ -348,38 +459,51 @@ p {
   .content-live-1::after {
     height: 50vh;
     top: -8vw;
-    left: -2rem;
+    /* left: -2rem; */
   }
   .content-view-feature ul {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
+  }
+  .benefit-two {
+    margin: 0 3rem;
+  }
+  .benefit img {
+    width: 2rem;
+  }
+  .content-why-choose-homeguruji div {
+    padding: 0 8%;
   }
 
   .content-why-choose-homeguruji ul {
-    font-size: 0.4rem;
+    font-size: 0.7rem;
     margin: 0.2rem 0.2rem 2rem 0.2rem;
   }
+  .content-why-choose-homeguruji i {
+    font-size: 1.7rem;
+    margin-bottom: 0.8rem;
+  }
+
   .content-why-choose-homeguruji li {
     margin: 1rem;
   }
   .content-why-choose-homeguruji h2 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 2rem 0 -1.5rem 0;
   }
-  .more-about-homeguruji {
-    font-size: 0.5rem;
-  }
+
   .more-about-homeguruji span {
     display: block;
   }
   .more-about-homeguruji {
-    line-height: 2rem;
+    line-height: 5;
+    font-size: 0.7rem;
   }
   .subjects-info li {
     padding: 0.2rem;
-    font-size: 0.1rem;
+    /* font-size: 0.9rem; */
   }
   .subjects-info i {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .subjects-info ul {
     margin: -3rem -1rem;
@@ -387,5 +511,36 @@ p {
   .feature-content-right h3 {
     font-size: 1rem;
     margin-bottom: -2rem;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .content-live-1-left p {
+    font-size: 0.9rem;
+  }
+  .content-view-feature h3 {
+    font-size: 0.9rem;
+  }
+  .content-view-feature ul {
+    padding: 5rem 0;
+    font-size: 0.55rem;
+  }
+  .content-why-choose-homeguruji ul {
+    font-size: 0.6rem;
+  }
+  .content-why-choose-homeguruji div {
+    padding: 0 5%;
+  }
+  .subjects-info span {
+    font-size: 0.55rem;
+  }
+  .toggle-btn {
+    font-size: 1.4rem;
+  }
+  .navbar {
+    padding: 0 0 0 1rem;
+  }
+  .content-live-1::after {
+    height: 48vh;
+    top: -8vw;
   }
 }

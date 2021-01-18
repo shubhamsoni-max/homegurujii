@@ -44,17 +44,22 @@
         </ul>
        
         <button class="btn btn-teacher font-weight">FOR TEACHERS</button> 
+       
       </div>
+      <span onclick="myfunction()" class="toggle-btn">
+        <i class=" toggle-btn fas fa-bars"></i>
+      </span>
+      
     </div>
 
     <!--Live-1 Home tuition for class 1st-12th-->
 
     <div class="content-live-1 d-flex justify-content">
       <div class="content-live-1-left font-weight">
-        <span>
-          Live 1:1 Home <br />
+        <p> Live 1:1 Home <br />
           Tuition for <br />
-          Class 1<sup>st</sup>-12<sup>th</sup> </span><br />
+          Class 1<sup>st</sup>-12<sup>th</sup> </p><br>
+    
         <button class="btn booking-btn font-weight">
           BOOK FREE TRIAL CLASS
         </button>
@@ -68,7 +73,7 @@
 
     <div class="subjects-info">
       <ul class="d-flex justify-content font-weight text-align">
-        <li>
+        <div class="d-flex justify-content"><li>
           <i style="color: orangered" class="fas fa-atom"></i><br />
           <span>Physics</span>
         </li>
@@ -89,8 +94,8 @@
           <span>Social <br />
             Studies
           </span>
-        </li>
-        <li>
+        </li></div>
+        <div class="d-flex justify-content"><li>
           <i style="color: rgb(255, 166, 0)" class="fab fa-galactic-senate"></i><br />
           <span>Cvics</span>
         </li>
@@ -110,7 +115,8 @@
         <li>
           <i style="color: violet" class="fas fa-satellite"></i><br />
           <span>Science</span>
-        </li>
+        </li></div>
+        
       </ul>
     </div>
     <hr />
@@ -123,22 +129,25 @@
     <div class="content-why-choose-homeguruji">
       <h2>Why Choose HomeGuruji?</h2>
       <ul class="d-flex justify-content text-align font-weight">
-        <li>
-          <i class="fas fa-id-card-alt"></i><br /><span>BENEFIT ONE</span>
-          Some Supporting text <br />About this benefit
-        </li>
-        <li>
-          <i class="fas fa-id-card-alt"></i><br /><span>BENEFIT TWO</span>
-          Some Supporting text <br />About this benefit
-        </li>
-        <li>
-          <i class="fas fa-id-card-alt"></i><br /><span>BENEFIT THREE</span>
-          Some Supporting text <br />About this benefit
-        </li>
-        <li>
-          <i class="fas fa-id-card-alt"></i><br /><span>BENEFIT FOUR</span>
-          Some Supporting text <br />About this benefit
-        </li>
+        <div class="d-flex justify-content">
+          <li>
+            <i class="fas fa-id-card-alt"></i><br /><span>BENEFIT ONE</span>
+            Some Supporting text <br />About this benefit
+          </li>
+          <li>
+            <i class="fas fa-id-card-alt"></i><br /><span>BENEFIT TWO</span>
+            Some Supporting text <br />About this benefit
+          </li>
+        </div>
+       <div class="d-flex justify-content"><li>
+        <i class="fas fa-id-card-alt"></i><br /><span>BENEFIT THREE</span>
+        Some Supporting text <br />About this benefit
+      </li>
+      <li>
+        <i class="fas fa-id-card-alt"></i><br /><span>BENEFIT FOUR</span>
+        Some Supporting text <br />About this benefit
+      </li></div>
+        
       </ul>
       <h3 style="color: blue" class="text-align">VIEW ALL FEACHERS</h3>
     </div>
@@ -161,7 +170,7 @@
               <img src="./images/icons8-google-classroom-128.png" alt=""><br /><span>BENEFIT ONE</span>
               Some Supporting text <br />About this benefit
             </li>
-            <li>
+            <li class="benefit-two">
               <img src="./images/icons8-improvement-128.png" alt=""><br /><span>BENEFIT TWO</span>
               Some Supporting text <br />About this benefit
             </li>
@@ -180,7 +189,7 @@
     <!--more about homeguruji features-->
 
     <div class="more-about-homeguruji font-weight">
-      <div> <img src="./images/logo2.jpeg" alt=""> </div>
+     <img src="./images/logo2.jpeg" alt=""> 
       <div><span>HOME</span>
         <span>ABOUT US</span>
         <span>ABOUT US</span>
@@ -209,9 +218,22 @@
         <i style="color: cyan;" class="fab fa-invision"></i>
       </div>
       <p>Terms of Servise, Privacy Policy </p>
-      <p>2020  Mirzapur,  Private Limted</p>
+      <p>2020  Private Limted</p>
     </div>
   </div>
+  <script>
+
+function myfunction(){
+  console.log("Working");
+  let toggle_item = document.querySelector(".navbar-right");
+  console.log(toggle_item.style.display);
+  if(toggle_item.style.display === "flex"){
+    toggle_item.style.display = "none"
+  }else{
+    toggle_item.style.display = "flex"
+  }
+}
+  </script>
 </body>
 
 </html>
